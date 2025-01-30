@@ -136,7 +136,7 @@
                 <img src="logo.png" alt="Logo" width="100" height="100">
             </div>
             <div class="title">
-                <h1>Auction Number Generator</h1>
+                <h1> UNITED AJ Auction Number Generator</h1>
             </div>
         </header>        
 
@@ -151,7 +151,7 @@
     </div>
 
     <script>
-        const numbers = Array.from({length: 100}, (_, i) => i + 1);
+        const numbers = Array.from({length: 90}, (_, i) => i + 1);
         const usedNumbers = new Set();
         const numberDisplay = document.getElementById('currentNumber');
         const generateBtn = document.getElementById('generateBtn');
@@ -167,7 +167,7 @@
         });
 
         function generateNumber() {
-            if (usedNumbers.size === 100) {
+            if (usedNumbers.size === 90) {
                 numberDisplay.textContent = 'All numbers used!';
                 generateBtn.disabled = true;
                 return;
@@ -175,7 +175,7 @@
 
             let randomNum;
             do {
-                randomNum = Math.floor(Math.random() * 100) + 1;
+                randomNum = Math.floor(Math.random() * 90) + 1;
             } while (usedNumbers.has(randomNum));
 
             usedNumbers.add(randomNum);
